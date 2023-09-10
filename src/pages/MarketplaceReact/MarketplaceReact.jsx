@@ -1,6 +1,6 @@
 import { Header } from "./components/Header"
 
-import "./style.sass"
+import "./style.scss"
 
 export const MarketplaceReact = () => {
     return (
