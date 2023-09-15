@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/marketplace-magister/static/css/main.c9695a92.css",
+    "main.js": "/marketplace-magister/static/js/main.915b651c.js",
+    "index.html": "/marketplace-magister/index.html",
+    "main.c9695a92.css.map": "/marketplace-magister/static/css/main.c9695a92.css.map",
+    "main.915b651c.js.map": "/marketplace-magister/static/js/main.915b651c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c9695a92.css",
+    "static/js/main.915b651c.js"
+  ]
+}
