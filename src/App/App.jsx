@@ -1,14 +1,9 @@
 import './App.css';
 
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { MarketplaceReact } from '../pages/MarketplaceReact';
+import { RouterProvider } from "react-router-dom";
+import { MarketplaceRouter } from '../router/Router';
 
-const MarketplaceRouter = createBrowserRouter([
-  {
-    path: "",
-    element: <MarketplaceReact />
-  }
-])
+
 
 export const App = () => {
   return (

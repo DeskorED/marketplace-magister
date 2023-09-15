@@ -1,0 +1,1 @@
+export {CurrentProductPage} from "./CurrentProductPage"

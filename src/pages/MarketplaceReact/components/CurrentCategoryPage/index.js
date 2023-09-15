@@ -1,0 +1,1 @@
+export {CurrentCategoryPage} from "./CurrentCategoryPage"

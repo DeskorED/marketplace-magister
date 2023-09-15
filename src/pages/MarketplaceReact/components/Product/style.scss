@@ -1,0 +1,28 @@
+.product {
+    width: 24%;
+    border: .75px solid black;
+    border-radius: 5%;
+    padding: 15px 10px;
+
+    .product__name {
+        margin-bottom: 25px;
+    }
+
+    .product__image {
+        margin: 0 auto;
+        height: 25vh;
+        width: fit-content;
+
+        img {
+            position: relative;
+            height: 100%;
+            transition: .15s;
+            z-index: 6;
+            cursor: pointer;
+
+            &:active{
+                transform: scale(2);
+            }
+        }
+    }
+}

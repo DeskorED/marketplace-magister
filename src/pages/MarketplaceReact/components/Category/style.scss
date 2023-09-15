@@ -1,0 +1,26 @@
+.category {
+    .category__products{
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+    .category__name {
+        margin-top: 50px;
+        min-height: 5vh;
+        position: relative;
+
+        .name__value {
+            z-index: 5;
+            top: -15px;
+            left: 5vw;
+            position: absolute;
+            width: fit-content;
+            background-color: white;
+        }
+
+        .name__hr {
+            z-index: 4;
+        }
+    }
+}
