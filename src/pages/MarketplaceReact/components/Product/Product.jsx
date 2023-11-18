@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 
-import { Routes } from "../../../../router/routes"
+import { routes } from "../../../../router/routes"
 
 import "./style.scss"
 
@@ -8,7 +8,7 @@ export const Product = ({ currentProduct, currentCategory }) => {
     return (
         <div className="product">
             <div className="product__name">
-                <Link to={Routes?.CurrentProduct(currentCategory?.id, currentProduct?.id)}>
+                <Link to={routes?.CurrentProduct(currentCategory?.id, currentProduct?.id)}>
                     {currentProduct?.name}
                 </Link>
             </div>

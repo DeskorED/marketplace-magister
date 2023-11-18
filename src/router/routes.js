@@ -1,4 +1,4 @@
-export const Routes = {
+export const routes = {
     Main: "/marketplace-magister/",
     CurrentCategory(categoryId) {
         return `/marketplace-magister/${categoryId}/all`

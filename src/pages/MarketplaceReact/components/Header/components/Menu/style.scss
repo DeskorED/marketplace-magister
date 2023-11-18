@@ -1,0 +1,43 @@
+.menu {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    a {
+        text-decoration: none;
+        color: white;
+
+        &:hover{
+            color: rgb(225, 150, 150);
+        }
+    }
+
+    .menu__wrapper{
+        position: absolute;
+        top: -18px;
+        z-index: 101;
+    }
+
+    .tab-list{
+        transform-origin: right top;
+        padding: 10px 7.5px;
+        background-color: black;
+        border: .5px solid black;
+        top:-22px;
+        right: -44px;
+        position: absolute;
+        z-index: 100;
+        transform: scale(0.001, 0.001);
+        transition: .35s;
+
+        .tab-list__additional-text{
+            font-weight: 200;
+        }
+
+        .tab{
+            margin-left: 25px;
+            margin-top: 7.5px;
+            width: fit-content;
+        }
+    }
+}

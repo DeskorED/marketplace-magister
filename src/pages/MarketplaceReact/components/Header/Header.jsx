@@ -1,4 +1,4 @@
-import { Menus } from "./components/Menus"
+import { Menu } from "./components/Menu"
 import { Search } from "./components/Search"
 import { Title } from "./components/Title"
 
@@ -9,7 +9,7 @@ export const Header = () => {
         <div className="header">
             <Title />
             <Search/>
-            <Menus />
+            <Menu />
         </div>
     )
 }

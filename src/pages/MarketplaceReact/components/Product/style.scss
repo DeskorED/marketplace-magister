@@ -1,5 +1,10 @@
 .product {
-    width: 24%;
+    a{
+        color: black;
+        text-decoration: none;
+    }
+
+    width: 18%;
     border: .75px solid black;
     border-radius: 5%;
     padding: 15px 10px;
@@ -10,12 +15,11 @@
 
     .product__image {
         margin: 0 auto;
-        height: 25vh;
-        width: fit-content;
+        width: 98%;
 
         img {
             position: relative;
-            height: 100%;
+            width: 100%;
             transition: .15s;
             z-index: 6;
             cursor: pointer;

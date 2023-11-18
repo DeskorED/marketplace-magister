@@ -5,6 +5,7 @@ import { CurrentProductPage } from "../pages/MarketplaceReact/components/Current
 import { CurrentCategoryPage } from "../pages/MarketplaceReact/components/CurrentCategoryPage";
 import { CatalogPage } from "../pages/MarketplaceReact/components/CatalogPage";
 import { CurrentCategory } from "../pages/MarketplaceReact/components/CurrentCategoryPage/components/CurrentCategory";
+import { UserPage } from "../pages/MarketplaceReact/components/UserPage"
 
 export const MarketplaceRouter = createBrowserRouter([
     {
@@ -14,6 +15,10 @@ export const MarketplaceRouter = createBrowserRouter([
             {
                 path: "",
                 element: <CatalogPage />
+            },
+            {
+                path: "user-page",
+                element: <UserPage />
             },
             {
                 path: ":currentCategoryID",

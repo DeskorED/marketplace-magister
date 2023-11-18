@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-import { Routes } from "../../../../router/routes";
+import { routes } from "../../../../router/routes";
 import { Product } from "../Product";
 
 import "./style.scss";
@@ -10,7 +10,7 @@ export const Category = ({ currentCategory }) => {
         <div className="category">
             <div className="category__item">
                 <div className="category__name">
-                    <Link to={Routes.CurrentCategory(currentCategory?.id)}>
+                    <Link to={routes.CurrentCategory(currentCategory?.id)}>
                         <div className="name__value">
                             {
                                 currentCategory?.name?.ua
