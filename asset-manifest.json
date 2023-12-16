@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/marketplace-magister/static/css/main.c9695a92.css",
-    "main.js": "/marketplace-magister/static/js/main.915b651c.js",
+    "main.css": "/marketplace-magister/static/css/main.9982da8b.css",
+    "main.js": "/marketplace-magister/static/js/main.62a578a5.js",
     "index.html": "/marketplace-magister/index.html",
-    "main.c9695a92.css.map": "/marketplace-magister/static/css/main.c9695a92.css.map",
-    "main.915b651c.js.map": "/marketplace-magister/static/js/main.915b651c.js.map"
+    "main.9982da8b.css.map": "/marketplace-magister/static/css/main.9982da8b.css.map",
+    "main.62a578a5.js.map": "/marketplace-magister/static/js/main.62a578a5.js.map"
   },
   "entrypoints": [
-    "static/css/main.c9695a92.css",
-    "static/js/main.915b651c.js"
+    "static/css/main.9982da8b.css",
+    "static/js/main.62a578a5.js"
   ]
 }
