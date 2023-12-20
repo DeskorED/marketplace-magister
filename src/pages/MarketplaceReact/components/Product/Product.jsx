@@ -2,6 +2,8 @@ import { Link } from "react-router-dom"
 
 import { routes } from "../../../../router/routes"
 
+import { textFormater } from "../../../../utility/textForamter"
+
 import "./style.scss"
 
 export const Product = ({ currentProduct, currentCategory }) => {
@@ -19,7 +21,7 @@ export const Product = ({ currentProduct, currentCategory }) => {
                 {currentProduct?.price?.value} {currentProduct?.price?.unit}
             </div>
             <div className="product__description">
-                {currentProduct?.description}
+                {textFormater(currentProduct?.description, 99)}
             </div>
 
         </div>
