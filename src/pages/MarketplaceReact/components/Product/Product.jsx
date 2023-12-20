@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 
 import { routes } from "../../../../router/routes"
 
-import { textFormater } from "../../../../utility/textForamter"
+import { textFormater } from "../../../../utility/textFormater"
 
 import "./style.scss"
 
