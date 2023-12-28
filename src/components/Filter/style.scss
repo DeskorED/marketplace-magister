@@ -1,0 +1,24 @@
+.filter__extra{
+  padding-left: 35px;
+
+  input{
+    margin-left: 35px;
+  }
+
+  .price__slider{
+    width: 50%;
+    margin-left: 15px;
+
+    display: flex;
+    justify-content: space-evenly;
+
+    input{
+      margin: 5px 15px;
+      width: 75px;
+    }
+  }
+
+  .slider{
+    width: 75%
+  }
+}
