@@ -1,3 +1,16 @@
+.filter__wrapper{
+  height: 0px;
+
+  .wrapper__switcher{
+    width: fit-content;
+    cursor: pointer;
+  }
+
+  .filter{
+    display: none;
+  }
+}
+
 .filter__extra{
   padding-left: 35px;
 

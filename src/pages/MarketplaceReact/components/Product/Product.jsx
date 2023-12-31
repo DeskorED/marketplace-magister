@@ -1,16 +1,39 @@
-import { Link } from "react-router-dom"
+import { useContext } from "react";
+import { Link } from "react-router-dom";
+import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 
-import { routes } from "../../../../router/routes"
+import { MarketplaceContext } from "../../MarketplaceReact";
+import { routes } from "../../../../router/routes";
 
-import { textFormater } from "../../../../utility/textFormater"
+import { textFormater } from "../../../../utility/textFormater";
 
-import "./style.scss"
+import "./style.scss";
 
 export const Product = ({ currentProduct, currentCategory }) => {
+    let { shoppingCart } = useContext(MarketplaceContext);
+
+    const handleAddToCart = () => {
+        let currentShoppingCart = shoppingCart?.get();
+
+        const existingProduct = currentShoppingCart.find(item => item.product.name === currentProduct.name);
+
+        if (existingProduct) {
+            existingProduct.quantity += 1;
+        } else {
+            currentShoppingCart.push({
+                id: currentProduct.name,
+                product: currentProduct,
+                quantity: 1
+            });
+        }
+
+        shoppingCart?.set([...currentShoppingCart]);
+    };
+
     return (
         <div className="product">
             <div className="product__name">
-                <Link to={routes?.CurrentProduct(currentCategory?.id, currentProduct?.id)}>
+                <Link to={routes?.CurrentProduct(currentCategory?.name, currentProduct?.name.substring(0, 25))}>
                     {currentProduct?.name}
                 </Link>
             </div>
@@ -23,7 +46,12 @@ export const Product = ({ currentProduct, currentCategory }) => {
             <div className="product__description">
                 {textFormater(currentProduct?.description, 99)}
             </div>
-
+            <div className="shopping-cart__add">
+                <AddShoppingCartIcon
+                    onClick={handleAddToCart}
+                    className="shopping-cart__add-icon"
+                />
+            </div>
         </div>
-    )
-}
+    );
+};

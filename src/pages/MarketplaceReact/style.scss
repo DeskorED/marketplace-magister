@@ -1,0 +1,15 @@
+.marketplace-page {
+  position: relative;
+
+  .shopping-card {
+    position: fixed;
+    width: fit-content;
+    bottom: 15px;
+    right: 15px;
+    cursor: pointer;
+
+    &:hover {
+      color: #363636;
+    }
+  }
+}

@@ -15,6 +15,7 @@ export const categories = [
                     unit: "UAH",
                 },
                 stats: {
+                    CPU: "Intel Core i5-1135G7",
                     RAM: "8 ГБ",
                     SSD: "512 ГБ",
                     Videocard: "nVidia GeForce MX450",
@@ -24,21 +25,6 @@ export const categories = [
                 img: "https://content.rozetka.com.ua/goods/images/big/285466617.jpg"
             },
             {
-                id: "FA506ICB-HN119",
-                name: "Ноутбук ASUS TUF Gaming A15 FA506ICB-HN119 (90NR0667-M00KT0) Graphite Black / AMD Ryzen 5 4600H / RAM 16 ГБ / SSD 512 ГБ / nVidia GeForce RTX 3050",
-                price: {
-                    value: 30000,
-                    unit: "UAH",
-
-                },
-                stats: {
-                    CPU: "AMD Ryzen 5 4600H",
-                    RAM: "16 ГБ",
-                    SSD: "512 ГБ",
-                    Videocard: "nVidia GeForce RTX 3050",
-                    "Дополнительные": "Подсветка клавиатуры"
-                },
-
                 id: "FA506ICB-HN119",
                 name: "Ноутбук ASUS TUF Gaming A15 FA506ICB-HN119 (90NR0667-M00KT0) Graphite Black / AMD Ryzen 5 4600H / RAM 16 ГБ / SSD 512 ГБ / nVidia GeForce RTX 3050",
                 price: {
@@ -62,6 +48,12 @@ export const categories = [
                     value: 33999,
                     unit: "UAH",
 
+                },
+                stats: {
+                    CPU: "Intel Core i5-11320H",
+                    RAM: "16 ГБ",
+                    SSD: "512 ГБ",
+                    Videocard: "nVidia GeForce RTX 3050",
                 },
                 description: "Ноутбук Lenovo IdeaPad Gaming 3 15IHU6 - идеальный выбор для геймеров и профессионалов, ценящих производительность. С 15.6-дюймовым IPS-экраном Full HD разрешением и частотой обновления 120 Гц, он обеспечивает яркое и плавное визуальное воспроизведение. Процессор Intel Core i5-11320H и 16 ГБ оперативной памяти гарантируют отличную производительность при выполнении множества задач. SSD-накопитель на 512 ГБ обеспечивает быстрый доступ к данным и высокую отзывчивость системы. Графические возможности поддерживаются видеокартой nVidia GeForce RTX 3050, обеспечивая потрясающую графику в играх и графических приложениях. Стильный дизайн в черном цвете придает устройству солидный вид, подчеркивая его игровую направленность.",
                 img: "https://content.rozetka.com.ua/goods/images/big/334788278.jpg"

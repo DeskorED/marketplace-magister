@@ -21,7 +21,7 @@ export const MarketplaceRouter = createBrowserRouter([
                 element: <UserPage />
             },
             {
-                path: ":currentCategoryID",
+                path: ":currentCategoryName",
                 element: <CurrentCategoryPage />,
                 children:
                     [
@@ -30,7 +30,7 @@ export const MarketplaceRouter = createBrowserRouter([
                             element: <CurrentCategory />
                         },
                         {
-                            path: ":currentProductID",
+                            path: ":currentProductName",
                             element: <CurrentProductPage />
                         }
                     ]

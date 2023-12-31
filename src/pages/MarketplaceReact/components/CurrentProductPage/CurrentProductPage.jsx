@@ -1,20 +1,21 @@
-import { useParams } from "react-router-dom"
+import {useContext} from "react";
+import {useParams} from "react-router-dom"
 
-import { categories } from "../../../../constants/categories"
+import {MarketplaceContext} from "../../MarketplaceReact";
 
-import { Hr } from "../../../../components/Hr";
+import {Hr} from "../../../../components/Hr";
 
 import "./style.scss"
 
+
 export const CurrentProductPage = () => {
+    let categories = useContext(MarketplaceContext)["response"]["categories"];
+    let {currentProductName} = useParams();
+    let {currentCategoryName} = useParams();
 
-    let { currentProductID } = useParams();
-    let { currentCategoryID } = useParams();
+    let currentCategory = categories?.find(category => category?.name === currentCategoryName);
+    let currentProduct = currentCategory?.items?.find(product => product?.name?.substring(0, 25) === currentProductName)
 
-    let currentCategory = categories?.find(category => category?.id === currentCategoryID);
-    let currentProduct = currentCategory.items.find(product => product?.id === currentProductID)
-
-    console.log(currentProduct)
 
     return (
         <div className="current-product">
@@ -26,31 +27,35 @@ export const CurrentProductPage = () => {
             <div className="current-product__image">
                 <img src={currentProduct?.img}></img>
             </div>
-            <Hr />
+            <Hr/>
             <div className="current-product__description">
                 {
                     currentProduct?.description
                 }
             </div>
-            <Hr />
+            <Hr/>
             <div className="current-product__price">
-                Ціна: 
+                Ціна:
                 {
-                    currentProduct?.price?.value + " " + currentProduct?.price?.unit
+                    currentProduct?.price + " грн"
                 }
             </div>
-            <Hr />
+            <Hr/>
             {
                 currentProduct?.stats &&
                 <div className="current-product__stats">
-                    Характеристики: 
+                    Характеристики:
                     {
                         Object?.entries(currentProduct?.stats).map(
-                            stat => <div className="current-procut__stat">
-                                {
-                                    stat[0] + " : " + stat[1]
-                                }
-                            </div>
+                            (stat, index) => {
+                                return (
+                                    <div key={`${currentProduct + index}`} className="current-product__stat">
+                                        {
+                                            stat[0] + " : " + stat[1]
+                                        }
+                                    </div>
+                                )
+                            }
                         )
                     }
                 </div>

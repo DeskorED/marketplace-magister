@@ -1,15 +1,18 @@
+import {useContext} from "react";
 import { useParams } from "react-router-dom";
 
-import { categories } from "../../../../../../constants/categories";
+import {MarketplaceContext} from "../../../../MarketplaceReact";
+
 import { Category } from "../../../Category";
 
 import "./style.scss"
 
 export const CurrentCategory = () => {
-    let { currentCategoryID } = useParams();
+    let categories = useContext(MarketplaceContext)["response"]["categories"];
+    let { currentCategoryName} = useParams();
 
     const currentCategory = categories?.find(
-        category => category?.id === currentCategoryID
+        category => category?.name === currentCategoryName
     )
 
     return (

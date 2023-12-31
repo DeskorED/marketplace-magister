@@ -1,14 +1,15 @@
-import { useState } from "react";
-
+import {useContext, useState} from "react";
 import { Link } from "react-router-dom"
+
 import { routes } from "../../../../../../router/routes"
-import { categories } from "../../../../../../constants/categories";
+import {MarketplaceContext} from "../../../../MarketplaceReact";
 
 import MenuIcon from '@mui/icons-material/Menu';
 
 import "./style.scss"
 
 export const Menu = () => {
+    let categories = useContext(MarketplaceContext)["response"]["categories"];
 
     const [menuWrapped, setMenuWrapped] = useState(true);
 
@@ -43,13 +44,13 @@ export const Menu = () => {
                     Категорії:
                 </div>
                 {
-                    categories.map(
+                    categories?.map(
                         category => {
                             return (
-                                <div className="tab">
-                                    <Link to={routes.CurrentCategory(category?.id)}>
+                                <div key={category?.name} className="tab">
+                                    <Link to={routes.CurrentCategory(category?.name)}>
                                         {
-                                            category?.name?.ua
+                                            category?.name
                                         }
                                     </Link>
                                 </div>

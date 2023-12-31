@@ -1,9 +1,9 @@
 export const routes = {
     Main: "/marketplace-magister/",
-    CurrentCategory(categoryId) {
-        return `/marketplace-magister/${categoryId}/all`
+    CurrentCategory(categoryName) {
+        return `/marketplace-magister/${categoryName}/all`
     },
-    CurrentProduct(categoryId, productId) {
-        return `/marketplace-magister/${categoryId}/${productId}`
+    CurrentProduct(categoryName, productName) {
+        return `/marketplace-magister/${categoryName}/${productName}`
     }
 }

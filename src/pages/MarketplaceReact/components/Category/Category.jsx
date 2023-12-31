@@ -6,14 +6,15 @@ import { Product } from "../Product";
 import "./style.scss";
 
 export const Category = ({ currentCategory }) => {
+
     return (
         <div className="category">
             <div className="category__item">
                 <div className="category__name">
-                    <Link to={routes.CurrentCategory(currentCategory?.id)}>
+                    <Link to={routes.CurrentCategory(currentCategory?.name)}>
                         <div className="name__value">
                             {
-                                currentCategory?.name?.ua
+                                currentCategory?.name
                             }
                         </div>
                     </Link>
@@ -22,7 +23,7 @@ export const Category = ({ currentCategory }) => {
                 <div className="category__products">
                     {
                         currentCategory?.items?.map(
-                            (product) => <Product currentProduct={product} currentCategory={currentCategory} />
+                            (product) => <Product key={product?.name} currentProduct={product} currentCategory={currentCategory} />
                         )
                     }
                 </div>

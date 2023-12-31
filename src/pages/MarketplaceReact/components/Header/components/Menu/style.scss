@@ -15,7 +15,7 @@
     .menu__wrapper{
         position: absolute;
         top: -18px;
-        z-index: 101;
+        z-index: 11;
     }
 
     .tab-list{
@@ -26,7 +26,7 @@
         top:-22px;
         right: -44px;
         position: absolute;
-        z-index: 100;
+        z-index: 10;
         transform: scale(0.001, 0.001);
         transition: .35s;
 
