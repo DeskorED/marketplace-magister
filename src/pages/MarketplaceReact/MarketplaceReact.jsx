@@ -38,7 +38,6 @@ export const MarketplaceReact = () => {
             <MarketplaceContext.Provider value={providedValue}>
                 <Header/>
                 <Outlet/>
-                <Footer/>
                 <div className="shopping-card">
                     <ShoppingCart/>
                 </div>

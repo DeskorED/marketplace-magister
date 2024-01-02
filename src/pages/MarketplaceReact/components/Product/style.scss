@@ -2,7 +2,7 @@
     position: relative;
 
     .shopping-cart__add{
-        transition: .35s;
+        transition: .15s;
         cursor: pointer;
         width: fit-content;
         position: absolute;
@@ -11,6 +11,10 @@
 
         &:hover{
             color: #363636;
+        }
+
+        &:active{
+            transform: scale(1.5);
         }
     }
 
